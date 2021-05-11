@@ -9,7 +9,7 @@ module AASM
         if hierarchy.include?("ActiveRecord::Base")
           require_persistence :active_record
           include_persistence base, :active_record
-        elsif hierarchy.include?("Neo4j::ActiveNode")
+        elsif hierarchy.include?("ActiveGraph::Node")
           require_persistence :neo4j
           include_persistence base, :neo4j
         elsif hierarchy.include?("Mongoid::Document")

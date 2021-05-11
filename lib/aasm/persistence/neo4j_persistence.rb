@@ -15,7 +15,7 @@ module AASM
         private
 
         def aasm_raise_invalid_record
-          raise Neo4j::ActiveNode::Persistence::RecordInvalidError.new(self)
+          raise ActiveGraph::Node::Persistence::RecordInvalidError.new(self)
         end
 
         def aasm_save
